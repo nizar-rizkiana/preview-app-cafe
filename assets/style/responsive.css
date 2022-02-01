@@ -1,0 +1,70 @@
+@media screen and (max-width: 576px) {
+    img.image-items {
+        max-height: 130px;
+    }
+
+    #menu-favorit {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    #menu-favorit .list-item {
+        width: 180px;
+    }
+
+    #detail .card .img-detail {
+        max-height: 280px;
+    }
+
+    #detail .card .card-footer {
+        margin-bottom: 135px;
+    }
+
+    #detail .container {
+        padding: 0;
+    }
+
+    #detail .card .col-md-6 {
+        padding: 0;
+        width: 100%;
+    }
+
+    #transaksi-desk {
+        display: none;
+    }
+
+    #transaksi-mobile {
+        display: block;
+    }
+
+    /* style responsive untuk halaman utama */
+    #hero-mobile {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #hero-dekstop {
+        display: none;
+    }
+
+    .header {
+        height: 100vh;
+    }
+
+    .header .mobile-layout {
+        text-align: center;
+    }
+
+    .header .mobile-layout .text-header {
+        font-size: 27px;
+    }
+
+    #favorit {
+        bottom: 0;
+    }
+
+    #favorit .item-favorit {
+        width: 200px;
+    }
+
+}

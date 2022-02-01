@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/responsive.css">
+    <title>Menu Makanan dan Minuman</title>
+</head>
+
+<body style="background-color: #eee;">
+    <!-- modal Konfirmasi pemesanan -->
+    <div class="modal fade" id="modalPesanan" aria-hidden="true" aria-labelledby="modalPesananLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPesananLabel">Konfirmasi Pesanan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- <form action="" method="post"> -->
+                <div class="modal-body">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/image/item3.png" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <p class="card-title mb-0 fw-bold">Hamburger Extra Large</p>
+                                    <p class="text-danger mb-0">Rp. 50.000 <span class="text-muted">x 4</span></p>
+                                    <p class="mb-0">Total Harga :</p>
+                                    <p class="m-0 text-success">Rp. 200.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="namaPemesan" class="form-label">Nama Pemesan</label>
+                        <input type="text" name="nama" class="form-control" id="namaPemesan"
+                            placeholder="Masukkan nama anda...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="catatanPesanan" class="form-label">Catatan Pemesanan</label>
+                        <textarea name="catatan" class="form-control" id="catatanPesanan" rows="3"
+                            placeholder="Tulis Catatan Untuk Pesanan Anda..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                        data-bs-dismiss="modal">Buat Pesanan</button>
+                </div>
+                <!-- </form> -->
+            </div>
+        </div>
+    </div>
+    <!-- modal konfirmasi pesanan ke dua -->
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Pesanan anda akan segera di antar oleh pelayan, mohon tunggu sebentar
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+                        data-bs-dismiss="modal">Back to first</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="main" class="col-12 col-md-6 col-xl-4 mx-auto bg-white">
+        <div class="box-header mb-5 p-4">
+            <h3 class="text-white text-capitalize">Temukan makanan dan minuman favorit kamu</h3>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                    <span class="input-group-text "><i class="bi bi-search"></i></span>
+                </div>
+            </div>
+        </div>
+        <h5 class="m-3">Paling Banyak Dipesan</h5>
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="favorit-item px-2 mb-4">
+                            <div class="card h-100 list-item">
+                                <img class="image-items" src="assets/image/item3.png" alt="">
+                                <div class="card-body p-2">
+                                    <p class="card-title fw-bold mb-1">Humberger</p>
+                                    <p class="text-truncate item-desc mb-1">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur.</p>
+                                </div>
+                                <div class="card-footer bg-transparent p-2">
+                                    <p class="text-danger fw-bold m-1">Rp. 20.000</p>
+                                    <a href="#" class="btn btn-outline-success p-0 w-100">PESAN<i
+                                            class="bi bi-clipboard-check fw-bold ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="splide__slide">
+                        <div class="favorit-item px-2 mb-4">
+                            <div class="card h-100 list-item">
+                                <img class="image-items" src="assets/image/item3.png" alt="">
+                                <div class="card-body p-2">
+                                    <p class="card-title fw-bold mb-1">Humberger</p>
+                                    <p class="text-truncate item-desc mb-1">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur.</p>
+                                </div>
+                                <div class="card-footer bg-transparent p-2">
+                                    <p class="text-danger fw-bold m-1">Rp. 20.000</p>
+                                    <a href="#" class="btn btn-outline-success p-0 w-100">PESAN<i
+                                            class="bi bi-clipboard-check fw-bold ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="favorit-item px-2 mb-4">
+                            <div class="card h-100 list-item">
+                                <img class="image-items" src="assets/image/item.png" alt="">
+                                <div class="card-body p-2">
+                                    <p class="card-title fw-bold mb-1">Frech Fries</p>
+                                    <p class="text-truncate item-desc mb-1">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur.</p>
+                                </div>
+                                <div class="card-footer bg-transparent p-2">
+                                    <p class="text-danger fw-bold m-1">Rp. 20.000</p>
+                                    <a href="#" class="btn btn-outline-success p-0 w-100">PESAN<i
+                                            class="bi bi-clipboard-check fw-bold ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="splide__progress">
+                <div class="splide__progress__bar">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <h5 class="my-5">Rekomendasi Untuk Kamu</h5>
+            <ul class="nav nav-pills mb-3 justify-content-around" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-all-items" data-bs-toggle="pill"
+                        data-bs-target="#all-items" type="button" role="tab" aria-controls="pills-all"
+                        aria-selected="true">Semua Menu</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-food-items" data-bs-toggle="pill" data-bs-target="#food-items"
+                        type="button" role="tab" aria-controls="pills-food" aria-selected="false">Makanan</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-drink-items" data-bs-toggle="pill" data-bs-target="#drink-items"
+                        type="button" role="tab" aria-controls="pills-drink" aria-selected="false">Minuman</button>
+                </li>
+            </ul>
+            <hr>
+            <div class="tab-content p-0" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="all-items" role="tabpanel" aria-labelledby="pills-all-items">
+                    <div class="row list-menu">
+                        <div class="col-6 px-2 mb-4">
+                            <div class="card h-100 list-item">
+                                <img class="image-items" src="assets/image/item.png" alt="">
+                                <div class="card-body p-2">
+                                    <p class="card-title fw-bold mb-1">Frech Fries</p>
+                                    <a href="detail.html" class="card-title fw-bold mb-1 nama-menu">French Fries</a>
+                                    <p class="text-truncate item-desc mb-1">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur.</p>
+                                </div>
+                                <div class="card-footer bg-transparent p-2">
+                                    <p class="text-danger fw-bold m-1">Rp. 20.000</p>
+                                    <a data-bs-toggle="modal" href="#modalPesanan" role="button"
+                                        class="btn btn-outline-success p-0 w-100">PESAN<i
+                                            class="bi bi-clipboard-check fw-bold ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 px-2 mb-4">
+                            <div class="card h-100 list-item">
+                                <img class="image-items" src="assets/image/item3.png" alt="">
+                                <div class="card-body p-2">
+                                    <a href="detail.html" class="card-title fw-bold mb-1 nama-menu">Hamburger</a>
+                                    <p class="text-truncate item-desc mb-1">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur.</p>
+                                </div>
+                                <div class="card-footer bg-transparent p-2">
+                                    <p class="text-danger fw-bold m-1">Rp. 20.000</p>
+                                    <a href="#modalPesanan" data-bs-toggle="modal" role="button"
+                                        class="btn btn-outline-success p-0 w-100">PESAN<i
+                                            class="bi bi-clipboard-check fw-bold ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 px-2 mb-4">
+                            <div class="card h-100 list-item">
+                                <img class="image-items" src="assets/image/item2.png" alt="">
+                                <div class="card-body p-2">
+                                    <a href="detail.html" class="card-title fw-bold mb-1 nama-menu">Kopi Capucino</a>
+                                    <p class="text-truncate item-desc mb-1">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur.</p>
+                                </div>
+                                <div class="card-footer bg-transparent p-2">
+                                    <p class="text-danger fw-bold m-1">Rp. 20.000</p>
+                                    <a href="#modalPesanan" data-bs-toggle="modal" role="button"
+                                        class="btn btn-outline-success p-0 w-100">PESAN<i
+                                            class="bi bi-clipboard-check fw-bold ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 px-2 mb-4">
+                            <div class="card h-100 list-item">
+                                <img class="image-items" src="assets/image/item2.png" alt="">
+                                <div class="card-body p-2">
+                                    <a href="detail.html" class="card-title fw-bold mb-1 nama-menu">Minuman Seger</a>
+                                    <p class="text-truncate item-desc mb-1">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur.</p>
+                                </div>
+                                <div class="card-footer bg-transparent p-2">
+                                    <p class="text-danger fw-bold m-1">Rp. 20.000</p>
+                                    <a href="#modalPesanan" data-bs-toggle="modal" role="button"
+                                        class="btn btn-outline-success p-0 w-100">PESAN<i
+                                            class="bi bi-clipboard-check fw-bold ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="food-items" role="tabpanel" aria-labelledby="pills-food-items">
+                    <div class="row list-menu">
+                        <div class="col-6 px-2 mb-4">
+                            <div class="card h-100 list-item">
+                                <img class="image-items" src="assets/image/item3.png" alt="">
+                                <div class="card-body p-2">
+                                    <a href="detail.html" class="card-title fw-bold mb-1 nama-menu">Hamburger</a>
+                                    <p class="text-truncate item-desc mb-1">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur.</p>
+                                </div>
+                                <div class="card-footer bg-transparent p-2">
+                                    <p class="text-danger fw-bold m-1">Rp. 20.000</p>
+                                    <a href="#modalPesanan" data-bs-toggle="modal" role="button"
+                                        class="btn btn-outline-success p-0 w-100">PESAN<i
+                                            class="bi bi-clipboard-check fw-bold ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 px-2 mb-4">
+                            <div class="card h-100 list-item">
+                                <img class="image-items" src="assets/image/item3.png" alt="">
+                                <div class="card-body p-2">
+                                    <a href="detail.html" class="card-title fw-bold mb-1 nama-menu">French Fries</a>
+                                    <p class="text-truncate item-desc mb-1">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur.</p>
+                                </div>
+                                <div class="card-footer bg-transparent p-2">
+                                    <p class="text-danger fw-bold m-1">Rp. 20.000</p>
+                                    <a href="#modalPesanan" data-bs-toggle="modal" role="button"
+                                        class="btn btn-outline-success p-0 w-100">PESAN<i
+                                            class="bi bi-clipboard-check fw-bold ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="drink-items" role="tabpanel" aria-labelledby="pills-drink-items">
+                    <div class="row list-menu">
+                        <div class="col-6 px-2 mb-4">
+                            <div class="card h-100 list-item">
+                                <img class="image-items" src="assets/image/item2.png" alt="">
+                                <div class="card-body p-2">
+                                    <a href="detail.html" class="card-title fw-bold mb-1 nama-menu">Kopi Capucino</a>
+                                    <p class="text-truncate item-desc mb-1">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur.</p>
+                                </div>
+                                <div class="card-footer bg-transparent p-2">
+                                    <p class="text-danger fw-bold m-1">Rp. 20.000</p>
+                                    <a href="#modalPesanan" data-bs-toggle="modal" role="button"
+                                        class="btn btn-outline-success p-0 w-100">PESAN<i
+                                            class="bi bi-clipboard-check fw-bold ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 px-2 mb-4">
+                            <div class="card h-100 list-item">
+                                <img class="image-items" src="assets/image/item2.png" alt="">
+                                <div class="card-body p-2">
+                                    <a href="detail.html" class="card-title fw-bold mb-1 nama-menu">Minuman Seger</a>
+                                    <p class="text-truncate item-desc mb-1">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur.</p>
+                                </div>
+                                <div class="card-footer bg-transparent p-2">
+                                    <p class="text-danger fw-bold m-1">Rp. 20.000</p>
+                                    <a href="#modalPesanan" data-bs-toggle="modal" role="button"
+                                        class="btn btn-outline-success p-0 w-100">PESAN<i
+                                            class="bi bi-clipboard-check fw-bold ms-2"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/splide/dist/js/splide.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/script/script.js"></script>
+    <script>
+        // auto height dan width
+        var splide = new Splide('.splide', {
+            type: 'loop',
+            perPage: 4,
+            focus: 'center',
+            autoWidth: true,
+            autoHeight: true,
+            autoplay: true,
+        });
+
+        splide.mount();
+    </script>
+</body>
+
+</html>

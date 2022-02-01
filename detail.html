@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/responsive.css">
+    <title>Detail Menu</title>
+</head>
+
+<body>
+    <!-- modal message -->
+
+    <div class="modal fade" id="modalPertanyaan" aria-hidden="true" aria-labelledby="modalPertanyaanLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPertanyaanLabel">Form pertanyaan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- <form action="" method="post"> -->
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="catatanPesanan" class="form-label">Apa Yang ingin anda tanyakan?</label>
+                        <textarea name="catatan" class="form-control" id="catatanPesanan" rows="3"
+                            placeholder="Tulis pertanyaan anda disini..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                        data-bs-dismiss="modal">Kirim pertanyaan</button>
+                </div>
+                <!-- </form> -->
+            </div>
+        </div>
+    </div>
+    <!-- modal Konfirmasi pemesanan -->
+    <div class="modal fade" id="modalPesanan" aria-hidden="true" aria-labelledby="modalPesananLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPesananLabel">Konfirmasi Pesanan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- <form action="" method="post"> -->
+                <div class="modal-body">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/image/item3.png" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <p class="card-title mb-0 fw-bold">Hamburger Extra Large</p>
+                                    <p class="text-danger mb-0">Rp. 50.000 <span class="text-muted">x 4</span></p>
+                                    <p class="mb-0">Total Harga :</p>
+                                    <p class="m-0 text-success">Rp. 200.000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="namaPemesan" class="form-label">Nama Pemesan</label>
+                        <input type="text" name="nama" class="form-control" id="namaPemesan"
+                            placeholder="Masukkan nama anda...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="catatanPesanan" class="form-label">Catatan Pemesanan</label>
+                        <textarea name="catatan" class="form-control" id="catatanPesanan" rows="3"
+                            placeholder="Tulis Catatan Untuk Pesanan Anda..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                        data-bs-dismiss="modal">Buat Pesanan</button>
+                </div>
+                <!-- </form> -->
+            </div>
+        </div>
+    </div>
+    <!-- modal konfirmasi pesanan ke dua -->
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Pesanan anda akan segera di antar oleh pelayan, mohon tunggu sebentar
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+                        data-bs-dismiss="modal">Back to first</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="detail">
+        <div class="container">
+            <!-- tombol kembali -->
+            <div class="back position-absolute p-3" style="z-index: 99;">
+                <a href="menu.html" class=""><i class="bi bi-arrow-left-circle-fill text-secondary"
+                        style="font-size: 35px;"></i></a>
+            </div>
+            <!-- end tombol kembali -->
+            <div class="card">
+                <div class="d-flex justify-content-center flex-wrap">
+                    <div class="col-md-6">
+                        <div id="main-slider" class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img class="img-detail" src="assets/image/item3.png">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img class="img-detail" src="assets/image/item2.png">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img class="img-detail" src="assets/image/item.png">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="thumbnail-slider" class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img class="img-detail" src="assets/image/item3.png">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img class="img-detail" src="assets/image/item2.png">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img class="img-detail" src="assets/image/item.png">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr class="my-1">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h3 class="card-title">Humberger Extra Large</h3>
+                            <p class="fw-bold text-danger">Rp. 50.000</p>
+                        </div>
+                        <div class="penilaian d-flex justify-content-around">
+                            <div class="suka text-center">
+                                <i class="bi bi-emoji-heart-eyes-fill text-success" style="font-size: 36px;"></i>
+                                <p class="fw-bold">80%</p>
+                            </div>
+                            <div class="netral text-center">
+                                <i class="bi bi-emoji-neutral-fill text-secondary" style="font-size: 36px;"></i>
+                                <p class="fw-bold">10%</p>
+                            </div>
+                            <div class="tidak-suka text-center">
+                                <i class="bi bi-emoji-frown-fill text-warning" style="font-size: 36px;"></i>
+                                <p class="fw-bold">10%</p>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <h3>Detail Produk</h3>
+                            <p id="teks-deskripsi">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
+                                quibusdam odit ipsum
+                                mollitia
+                                excepturi voluptate, consequuntur tempora qui animi nostrum ex reiciendis accusantium
+                                dolorem
+                                distinctio eius illum aperiam illo. Nesciunt delectus quisquam perspiciatis quam
+                                perferendis
+                                quia
+                                tempora distinctio, aspernatur dolores provident accusamus iusto libero placeat ducimus
+                                officiis
+                                modi voluptates facere fugit! Quibusdam est quisquam voluptatum quod nostrum, delectus
+                                illum
+                                dolore
+                                nam incidunt. Quam dolorem sint iusto est rerum a consequatur amet odit nemo. Tenetur
+                                alias
+                                in ipsum
+                                voluptatibus? Impedit eligendi architecto incidunt nisi ducimus saepe rem iste quia
+                                corrupti
+                                nostrum, natus expedita. Voluptates eveniet quos nisi magni id tempore expedita!</p>
+                        </div>
+                        <div id="transaksi-desk" class="bg-white p-2 border-top border-3">
+                            <div class="quantity d-flex justify-content-between align-items-center">
+                                <ul class="list-group list-group-horizontal">
+                                    <li class="list-group-item bg-success text-white fw-bold">+</li>
+                                    <li class="list-group-item">1</li>
+                                    <li class="list-group-item bg-success text-white fw-bold">-</li>
+                                </ul>
+                                <p class="total-harga fw-bold m-0">Rp. 50.000</p>
+                            </div>
+                            <hr class="m-2">
+                            <div class="d-flex justify-content-around align-items-center">
+                                <a data-bs-toggle="modal" href="#modalPesanan" role="button"
+                                    class="btn m-2 text-white fw-bold w-75 rounded-pill"
+                                    style="background-color: #62ba87;">PESAN</a>
+                                <a data-bs-toggle="modal" href="#modalPertanyaan" role="button"
+                                    class="bi bi-chat-left-text" style="font-size: 24px;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="transaksi-mobile" class="fixed-bottom bg-white p-2 border-top border-3">
+        <div class="quantity d-flex justify-content-between align-items-center">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item bg-success text-white fw-bold">+</li>
+                <li class="list-group-item">1</li>
+                <li class="list-group-item bg-success text-white fw-bold">-</li>
+            </ul>
+            <p class="total-harga fw-bold m-0">Rp. 50.000</p>
+        </div>
+        <hr class="m-2">
+        <div class="d-flex justify-content-around align-items-center">
+            <a data-bs-toggle="modal" href="#modalPesanan" role="button"
+                class="btn m-2 text-white fw-bold w-75 rounded-pill" style="background-color: #62ba87;">PESAN</a>
+            <a data-bs-toggle="modal" href="#modalPertanyaan" role="button" class="bi bi-chat-left-text"
+                style="font-size: 24px;"></a>
+        </div>
+    </div>
+    <script src="assets/splide/dist/js/splide.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/script/script.js"></script>
+    <script>
+        // image slider
+        // var imageSlider = new Splide('#image-slider', {
+        //     type: 'loop',
+        //     arrows: true,
+        //     autoplay: true,
+        // });
+        // imageSlider.mount();
+        document.addEventListener('DOMContentLoaded', function () {
+            var main = new Splide('#main-slider', {
+                type: 'fade',
+                rewind: true,
+                pagination: false,
+                arrows: false,
+            });
+
+
+            var thumbnails = new Splide('#thumbnail-slider', {
+                fixedWidth: 100,
+                fixedHeight: 60,
+                gap: 10,
+                rewind: true,
+                pagination: false,
+                cover: true,
+                isNavigation: true,
+                arrows: false,
+                focus: 'center',
+                autoplay: true,
+                breakpoints: {
+                    600: {
+                        fixedWidth: 60,
+                        fixedHeight: 44,
+                    },
+                },
+            });
+
+
+            main.sync(thumbnails);
+            main.mount();
+            thumbnails.mount();
+        });
+    </script>
+
+</body>
+
+</html>
